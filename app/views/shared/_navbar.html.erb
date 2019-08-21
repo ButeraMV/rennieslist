@@ -1,0 +1,40 @@
+<nav class="navbar">
+  <span class="navbar-toggle" id="js-navbar-toggle">
+    <i class="fas fa-bars"></i>
+  </span>
+  <a href="#" class="logo">RL</a>
+  <ul class="main-nav" id="js-menu">
+    <li>
+      <a href="#" class="nav-links">Home</a>
+    </li>
+    <li>
+      <a href="#" class="nav-links">Jobs</a>
+    </li>
+    <li>
+      <a href="#" class="nav-links">Performers</a>
+    </li>
+    <li>
+      <a href="#" class="nav-links">Vendors</a>
+    </li>
+    <% if user_signed_in? %>
+      <li>
+        <a href="#" class="nav-links">Logout</a>
+      </li>
+    <% else %>
+      <li>
+        <a href="#" class="nav-links">Login</a>
+      </li>
+      <li>
+        <a href="#" class="nav-links">Register</a>
+      </li>
+    <% end %>
+  </ul>
+</nav>
+
+<script>
+let mainNav = document.getElementById('js-menu');
+let navBarToggle = document.getElementById('js-navbar-toggle');
+navBarToggle.addEventListener('click', function () {
+  mainNav.classList.toggle('active');
+});
+</script>

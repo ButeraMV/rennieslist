@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Rennieslist</title>
+    <script src="https://kit.fontawesome.com/cb98ee1bc5.js"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +12,7 @@
   </head>
 
   <body>
+    <%= render 'shared/navbar' %>
     <%= yield %>
   </body>
 </html>
