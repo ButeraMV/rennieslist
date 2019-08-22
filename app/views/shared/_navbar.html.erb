@@ -16,16 +16,16 @@
     <li>
       <a href="#" class="nav-links">Vendors</a>
     </li>
-    <% if user_signed_in? %>
+    <% if current_user %>
       <li>
-        <a href="#" class="nav-links">Logout</a>
+        <%= link_to 'Logout', logout_path, class: 'nav-links' %>
       </li>
     <% else %>
       <li>
-        <a href="#" class="nav-links">Login</a>
+        <%= link_to 'Login', login_path, class: 'nav-links' %>
       </li>
       <li>
-        <a href="#" class="nav-links">Register</a>
+        <%= link_to 'Register', new_user_path, class: 'nav-links' %>
       </li>
     <% end %>
   </ul>

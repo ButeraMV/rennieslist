@@ -1,0 +1,28 @@
+input,
+button {
+  border: none;
+}
+
+.card {
+  // background-color: #B6A487;
+  background-color: #74544E;
+  color: #F7F6EE;
+  margin: 20vh auto 0 auto;
+  padding: 10vh 10vw;
+  text-align: center;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+.jobs-button {
+  background-color: #CEA185;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 2vh;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.jobs-button:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 2px #2c2c2c;
+}
