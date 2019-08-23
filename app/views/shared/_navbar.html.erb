@@ -18,7 +18,7 @@
     </li>
     <% if current_user %>
       <li>
-        <%= link_to 'Logout', logout_path, class: 'nav-links' %>
+        <%= link_to 'Logout', logout_path, method: 'delete', class: 'nav-links' %>
       </li>
     <% else %>
       <li>
