@@ -1,4 +1,5 @@
 class Tag < ApplicationRecord
-  has_and_belongs_to_many :jobs
+  has_many :job_tags
+  has_many :jobs, through: :job_tags
   validates :name, presence: true, uniqueness: true
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_26_125144) do
+ActiveRecord::Schema.define(version: 2019_09_04_145441) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,17 +36,20 @@ ActiveRecord::Schema.define(version: 2019_08_26_125144) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "jobs", force: :cascade do |t|
-    t.string "position"
-    t.text "description"
+  create_table "job_tags", force: :cascade do |t|
+    t.integer "job_id"
+    t.integer "tag_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "jobs_tags", id: false, force: :cascade do |t|
-    t.bigint "job_id", null: false
-    t.bigint "tag_id", null: false
-    t.index ["job_id", "tag_id"], name: "index_jobs_tags_on_job_id_and_tag_id"
+  create_table "jobs", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_jobs_on_user_id"
   end
 
   create_table "tags", force: :cascade do |t|
@@ -56,7 +59,7 @@ ActiveRecord::Schema.define(version: 2019_08_26_125144) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
+    t.string "display_name"
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", null: false
@@ -64,4 +67,5 @@ ActiveRecord::Schema.define(version: 2019_08_26_125144) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "jobs", "users"
 end
