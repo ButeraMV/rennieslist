@@ -1,3 +1,47 @@
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@media only screen and (max-width: 767px) {
+  input {
+    background-color: #F7F6EE;
+    padding: 10px;
+    margin: 2px;
+    width: 80%;
+    font-size: 1.2rem;
+  }
+
+  .login-card {
+    background-color: #B6A487;
+    width: 80vw;
+    margin: 25vh auto;
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  .login-button {
+    padding: 10px;
+    background-color: #74544E;
+    color: #F7F6EE;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+    input {
+      background-color: #F7F6EE;
+      padding: 10px;
+      margin: 8px;
+      width: 80%;
+      font-size: 1.2rem;
+    }
+
+    .login-card {
+      background-color: #B6A487;
+      width: 600px;
+      margin: 20vh auto;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    .login-button {
+      padding: 10px;
+      background-color: #74544E;
+      color: #F7F6EE;
+    }
+}

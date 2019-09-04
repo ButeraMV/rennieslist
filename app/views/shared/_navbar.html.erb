@@ -5,18 +5,12 @@
   <a href="#" class="logo">RL</a>
   <ul class="main-nav" id="js-menu">
     <li>
-      <a href="#" class="nav-links">Home</a>
-    </li>
-    <li>
-      <%= link_to 'Jobs', jobs_path, class: 'nav-links' %>
-    </li>
-    <li>
-      <a href="#" class="nav-links">Performers</a>
-    </li>
-    <li>
-      <a href="#" class="nav-links">Vendors</a>
+      <%= link_to 'Job Board', jobs_path, class: 'nav-links' %>
     </li>
     <% if current_user %>
+      <li>
+        <%= link_to 'View Profile', user_path(current_user), class: 'nav-links' %>
+      </li>
       <li>
         <%= link_to 'Logout', logout_path, method: 'delete', class: 'nav-links' %>
       </li>
