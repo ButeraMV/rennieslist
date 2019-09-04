@@ -29,10 +29,10 @@ food = Tag.create(name: 'Food Service')
 cook = Tag.create(name: 'Cook')
 Tag.create(name: 'Lanes')
 
-juggling_job.tags << fire
-juggling_job.tags << danger
-juggling_job.tags << sharps
-juggling_job.tags << juggling
+juggle_job.tags << fire
+juggle_job.tags << danger
+juggle_job.tags << sharps
+juggle_job.tags << juggling
 
 music_job.tags << singing
 music_job.tags << guitar
