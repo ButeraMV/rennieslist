@@ -1,0 +1,18 @@
+<table class="jobs-table">
+  <thead>
+    <tr>
+      <th>Job Title</th>
+      <th>Posted By</th>
+      <th>Posted On</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @jobs.each do | job | %>
+      <tr>
+        <td><%= job.title %></td>
+        <td><%= job.user.display_name %></td>
+        <td><%= job.created_at.strftime('%m/%d/%Y') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
